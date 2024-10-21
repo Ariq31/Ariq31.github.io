@@ -224,7 +224,10 @@ a:hover{
 }
 
 .my_project{
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .technology-container{
@@ -597,7 +600,7 @@ a:hover{
   }
   
   #modalTitle {
-    font-size: var(--fs-xxlarge);
+    font-size: 30px;
   }
   
   #modal-divider {
@@ -610,8 +613,12 @@ a:hover{
     margin-bottom: 2rem;
   }
   
+  #modal-link-wrapper{
+    display: flex;
+    gap: 10px;
+  }
   #modalLink {
-    background: var(--accent-yellow);
+    background: #333333;
     padding: 0.65rem 1rem;
     border-radius: 0.438rem;
     text-decoration: none;
@@ -623,9 +630,22 @@ a:hover{
   #modalLink:hover {
     filter: brightness(0.8);
   }
+  
+  #modalPreview {
+    background: #333333;
+    padding: 0.65rem 1rem;
+    border-radius: 0.438rem;
+    text-decoration: none;
+    color: var(--bg-black);
+    font-weight: var(--fw-semi-bold);
+    transition: filter 0.3s ease;
+  }
+  
+  #modalPreview:hover {
+    filter: brightness(0.8);
+  }
 
-
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 798px) {
     .bio-wrapper{
       /* padding: 50px; */
       display: flex;
@@ -697,5 +717,9 @@ a:hover{
     margin-top: 20px;
     cursor: pointer;
     
+  }
+
+  .modal-description-container {
+    padding: 2rem 4rem;
   }
   }

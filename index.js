@@ -39,6 +39,7 @@ const modalImage = document.getElementById('modalImage');
 const modalTitle = document.getElementById('modalTitle');
 const modalDescription = document.getElementById('modalDescription');
 const modalLink = document.getElementById('modalLink');
+const modalPreview = document.getElementById('modalPreview');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -65,16 +66,19 @@ portfolioItems.forEach(item => {
         const title = this.querySelector('.project-description-cont h3').textContent;
         const description = this.getAttribute('data-description');
         const projectLink = this.getAttribute('data-project-link');
+        const previewLink = this.getAttribute('data-preview-link');
 
         modalImage.src = imageSrc;
         modalImage.alt = title;
         modalTitle.innerText = title;
         modalDescription.innerText = description;
-
         if (projectLink) {
             modalLink.href = projectLink;
             modalLink.style.display = 'inline-block';
-        } else {
+            modalPreview.href = previewLink;
+            modalPreview.style.display = 'inline-block'
+        }
+        else {
             modalLink.style.display = 'none';
         }
 
